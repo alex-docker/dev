@@ -1,0 +1,2 @@
+ docker run -d -p 8000:8000 --name whoami -t jwilder/whoami
+docker run --name docker-register -d -e HOST_IP=$(hostname --all-ip-addresses | awk '{print $1}') -e ETCD_HOST=10.170.71.226:4001 -v /var/run/docker.sock:/var/run/docker.sock -t jwilder/docker-register

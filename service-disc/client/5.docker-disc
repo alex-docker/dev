@@ -1,0 +1,1 @@
+docker run -d --net host --name docker-discover -e ETCD_HOST=10.170.71.226:4001 -p 127.0.0.1:1936:1936 -t jwilder/docker-discover

@@ -1,0 +1,4 @@
+HOST_IP=$(hostname --all-ip-addresses | awk '{print $1}')
+ETCD_HOST="$HOST_IP:4001"
+
+docker run --name docker-register -d -e HOST_IP=$HOST_IP -e ETCD_HOST=$ETCD_HOST -v /var/run/docker.sock:/var/run/docker.sock -t jwilder/docker-register

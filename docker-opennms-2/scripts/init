@@ -1,0 +1,103 @@
+#!/bin/bash
+set -e
+
+export OPENNMS_HOME=/usr/share/opennms
+
+OPENNMS_PIDFILE=/var/run/opennms.pid
+
+PG_HOST=${PG_HOST:-${DB_PORT_5432_TCP_ADDR:-localhost}}
+PG_PORT=${PG_PORT:-${DB_PORT_5432_TCP_PORT:-5432}}
+PG_DATABASE=${PG_DATABASE:-${DB_ENV_DB:-opennms}}
+PG_USER=${PG_USER:-${DB_ENV_USER:-postgres}}
+PG_PASS="${PG_PASS:-${DB_ENV_PASS:-}}"
+
+export PG_HOST PG_PORT PG_DATABASE PG_USER PG_PASS
+
+[ -f /etc/opennms/opennms-datasources.xml ] && \
+  mv -f /etc/opennms/opennms-datasources.xml /etc/opennms/opennms-datasources.xml.orig
+
+cat <<EOF > /etc/opennms/opennms-datasources.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<datasource-configuration xmlns:this="http://xmlns.opennms.org/xsd/config/opennms-datasources"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.opennms.org/xsd/config/opennms-datasources
+  http://www.opennms.org/xsd/config/opennms-datasources.xsd ">
+
+  <connection-pool factory="${JDBC_CONNECTION_FACTORY:-org.opennms.core.db.C3P0ConnectionFactory}"
+    idleTimeout="${JDBC_IDLE_TIMEOUT:-600}"
+    loginTimeout="${JDBC_LOGIN_TIMEOUT:-3}"
+    minPool="${JDBC_MIN_POOL:-10}"
+    maxPool="${JDBC_MAX_POOL:-50}"
+    maxSize="${JDBC_MAX_SIZE:-500}" />
+
+  <jdbc-data-source name="opennms"
+                    database-name="${PG_DATABASE}"
+                    class-name="org.postgresql.Driver"
+                    url="jdbc:postgresql://${PG_HOST}:${PG_PORT}/${PG_DATABASE}"
+                    user-name="${PG_USER}"
+                    password="${PG_PASS}" />
+
+  <jdbc-data-source name="opennms-admin"
+                    database-name="template1"
+                    class-name="org.postgresql.Driver"
+                    url="jdbc:postgresql://${PG_HOST}:${PG_PORT}/template1"
+                    user-name="${PG_USER}"
+                    password="${PG_PASS}" />
+</datasource-configuration>
+EOF
+
+# Run a local postgresql server if necessary
+if [ "${PG_HOST}" == "localhost" ]; then
+  # Open up postgresql security
+  sed -i -e 's/peer/trust/g' -e 's/md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
+
+  echo "Starting postgresql ..."
+  /etc/init.d/postgresql start
+
+  # Change template0 from ASCII to UTF8
+  sudo -u postgres psql -c "update pg_database set datallowconn = TRUE where datname = 'template0';"
+  sudo -u postgres psql template0 -c "update pg_database set datistemplate = FALSE where datname = 'template1';"
+  sudo -u postgres psql template0 -c "drop database template1;"
+  sudo -u postgres psql template0 -c "create database template1 with template = template0 encoding = 'UTF8';"
+  sudo -u postgres psql template0 -c "update pg_database set datistemplate = TRUE where datname = 'template1';"
+  sudo -u postgres psql template1 -c "update pg_database set datallowconn = FALSE where datname = 'template0';"
+fi
+
+[ -n "$INTENTIONALLY_SLEEP" ] && sleep $INTENTIONALLY_SLEEP
+
+perl -pi -e 's/^JAVA/#JAVA/' /etc/default/opennms
+echo JAVA_HOME=/usr/lib/jvm/$(ls -1t /usr/lib/jvm | head -1) >> /etc/default/opennms
+
+${OPENNMS_HOME}/bin/install -dis
+yes | /usr/sbin/install_iplike.sh || true
+#${OPENNMS_HOME}/bin/config-tester || true
+
+echo "Starting opennms ..."
+/etc/init.d/opennms start
+
+# wait for opennms server to start (max 300 seconds)
+timeout=300
+while ! opennms -v status
+do
+  timeout=$(expr $timeout - 1)
+  if [ $timeout -eq 0 ]; then
+    echo "Failed to start opennms daemon"
+    exit 1
+  fi
+  sleep 1
+done
+
+# Start tailing the opennms logs:
+tail -f $(find /var/log/opennms/ -name '*.log') &
+
+# Wait here until opennms exits
+OPENNMS_PID=$(cat ${OPENNMS_PIDFILE})
+true
+while [[ ${?} == 0 ]]      # Repeat until the process has terminated.
+do
+    sleep 10               # Wait a bit before testing.
+    ps -p ${OPENNMS_PID} >/dev/null  # Check if the process has terminated.
+done
+
+# As the ENTRYPOINT script, when this exits the docker container will Exit.
+exit 0

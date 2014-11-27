@@ -1,0 +1,15 @@
+{
+  "builders": [{
+      "type": "docker",
+      "image": "centos:centos6",
+      "export_path": "centos-ansible-1.6.tar"
+  }],
+  "provisioners": [{
+      "type": "shell",
+      "inline": [
+          "rpm -Uvh http://mirror.cogentco.com/pub/linux/epel/6/i386/epel-release-6-8.noarch.rpm",
+	  "yum -y update",
+          "yum -y install ansible python-pycurl python-pip python-virtualenv"
+      ]
+  }]
+}

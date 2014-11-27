@@ -1,0 +1,1 @@
+docker run -e HOST_IP=$(hostname --all-ip-addresses | awk '{print $1}') -i -t ubuntu:14.04 /bin/bash

@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Pierpaolo Baldan <pierpaolo.baldan@gmail.com>, 2011
+# Pierpaolo Baldan <pierpaolo.baldan@gmail.com>, 2012
+# Roberto Rosario, 2011
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-31 19:54-0400\n"
+"PO-Revision-Date: 2012-12-12 06:07+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/mayan-edms/"
+"language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:26
+msgid "preview"
+msgstr "anteprima"
+
+#: __init__.py:30
+msgid "tagged items"
+msgstr "articoli etichettati."
+
+#: __init__.py:37 __init__.py:45 links.py:19 views.py:124
+msgid "tags"
+msgstr "etichette"
+
+#: __init__.py:68
+msgid "Returns a list of all the tags."
+msgstr ""
+
+#: forms.py:24
+msgid "Name"
+msgstr "Nome"
+
+#: forms.py:25
+msgid "Color"
+msgstr "Colori"
+
+#: forms.py:42 permissions.py:7
+msgid "Tags"
+msgstr "Etichette"
+
+#: links.py:10
+msgid "tag list"
+msgstr "lista delle etichette"
+
+#: links.py:11
+msgid "create new tag"
+msgstr "crea una nuova etichetta"
+
+#: links.py:13 links.py:14
+msgid "attach tag"
+msgstr "allega un'etichetta"
+
+#: links.py:16
+msgid "remove tag"
+msgstr ""
+
+#: links.py:17
+msgid "remove tags"
+msgstr ""
+
+#: links.py:20 links.py:23
+msgid "delete"
+msgstr "cancella"
+
+#: links.py:21
+msgid "edit"
+msgstr "modifica"
+
+#: links.py:22
+msgid "tagged documents"
+msgstr "documenti etichettati"
+
+#: links.py:24
+msgid "ACLs"
+msgstr "ACLs"
+
+#: literals.py:17
+msgid "Blue"
+msgstr "Blue"
+
+#: literals.py:18
+msgid "Cyan"
+msgstr "Ciaono"
+
+#: literals.py:19
+msgid "Coral"
+msgstr "Corallo"
+
+#: literals.py:20
+msgid "Green-Yellow"
+msgstr "Verdognolo"
+
+#: literals.py:21
+msgid "Khaki"
+msgstr "Khaki"
+
+#: literals.py:22
+msgid "LightGrey"
+msgstr "Grigio chiaro"
+
+#: literals.py:23
+msgid "Magenta"
+msgstr "Magenta"
+
+#: literals.py:24
+msgid "Red"
+msgstr "Rosso"
+
+#: literals.py:25
+msgid "Orange"
+msgstr "Arancione"
+
+#: literals.py:26
+msgid "Yellow"
+msgstr "Giallo"
+
+#: models.py:13 views.py:178 views.py:230 views.py:243
+msgid "tag"
+msgstr "etichetta"
+
+#: models.py:14
+msgid "color"
+msgstr "colore"
+
+#: models.py:17
+msgid "tag properties"
+msgstr "proprità dell'etichetta"
+
+#: models.py:18
+msgid "tags properties"
+msgstr "proprietà delle etichette"
+
+#: permissions.py:9
+msgid "Create new tags"
+msgstr "Crea un nuova etichetta"
+
+#: permissions.py:10
+msgid "Delete tags"
+msgstr "Eliminare i tag"
+
+#: permissions.py:11
+msgid "Edit tags"
+msgstr "Modificare i tag"
+
+#: permissions.py:12
+msgid "View tags"
+msgstr "Visualizzare i tag"
+
+#: permissions.py:13
+msgid "Attach tags to documents"
+msgstr "Applicare i tag ai documenti"
+
+#: permissions.py:14
+msgid "Remove tags from documents"
+msgstr "Rimuovi  etichetta dal documento"
+
+#: views.py:43
+msgid "Tag already exists."
+msgstr "L'etichetta già esiste"
+
+#: views.py:51
+msgid "Tag created succesfully."
+msgstr "Etichetta creata con successo"
+
+#: views.py:57
+msgid "create tag"
+msgstr "crea etichetta"
+
+#: views.py:69
+msgid "Must provide at least one document."
+msgstr ""
+
+#: views.py:87
+#, python-format
+msgid "Document \"%(document)s\" is already tagged as \"%(tag)s\""
+msgstr ""
+
+#: views.py:92
+#, python-format
+msgid "Tag \"%(tag)s\" attached successfully to document \"%(document)s\"."
+msgstr ""
+
+#: views.py:100
+msgid "document"
+msgstr ""
+
+#: views.py:108
+#, python-format
+msgid "Attach tag to document: %s."
+msgstr ""
+
+#: views.py:110
+#, python-format
+msgid "Attach tag to documents: %s."
+msgstr ""
+
+#: views.py:154
+msgid "Must provide at least one tag."
+msgstr "Devi fornire almeno un'etichetta"
+
+#: views.py:169
+#, python-format
+msgid "Tag \"%s\" deleted successfully."
+msgstr "Etichetta \"%s\" cancellata con successo."
+
+#: views.py:171
+#, python-format
+msgid "Error deleting tag \"%(tag)s\": %(error)s"
+msgstr "Errore nel cancellare l'etichetta \"%(tag)s\": %(error)s"
+
+#: views.py:186
+#, python-format
+msgid "Are you sure you wish to delete the tag: %s?"
+msgstr "Sei sicuro di voler cancellare questa etichetta: %s?"
+
+#: views.py:187 views.py:190
+msgid "Will be removed from all documents."
+msgstr "Sarà rimossa da tutti i documenti"
+
+#: views.py:189
+#, python-format
+msgid "Are you sure you wish to delete the tags: %s?"
+msgstr "Sei sicuro di voler cancellare tutte queste etichette: %s?"
+
+#: views.py:218
+msgid "Tag updated succesfully."
+msgstr "Etichetta aggiornata con successo"
+
+#: views.py:227
+#, python-format
+msgid "edit tag: %s"
+msgstr "modifica l'etichetta:%s"
+
+#: views.py:240
+#, python-format
+msgid "documents with the tag \"%s\""
+msgstr "documenti con l'etichetta \"%s\""
+
+#: views.py:259
+#, python-format
+msgid "tags for: %s"
+msgstr "etichette per: %s"
+
+#: views.py:271
+msgid "Must provide at least one tagged document."
+msgstr ""
+
+#: views.py:310
+#, python-format
+msgid "Remove tag from document: %s."
+msgstr ""
+
+#: views.py:312
+#, python-format
+msgid "Remove tag from documents: %s."
+msgstr ""
+
+#: views.py:318
+#, python-format
+msgid ""
+"Are you sure you wish to remove the tag \"%(tag)s\" from the document: "
+"%(document)s?"
+msgstr ""
+
+#: views.py:321
+#, python-format
+msgid ""
+"Are you sure you wish to remove the tag \"%(tag)s\" from the documents: "
+"%(documents)s?"
+msgstr ""
+
+#: views.py:326
+#, python-format
+msgid ""
+"Are you sure you wish to remove the tags: %(tags)s from the document: "
+"%(document)s?"
+msgstr ""
+
+#: views.py:329
+#, fuzzy, python-format
+msgid ""
+"Are you sure you wish to remove the tags %(tags)s from the documents: "
+"%(documents)s?"
+msgstr "Sei sicuro di voler cancellare tutte queste etichette: %s?"
+
+#: views.py:336
+#, python-format
+msgid "Document \"%(document)s\" wasn't tagged as \"%(tag)s\""
+msgstr ""
+
+#: views.py:341
+#, python-format
+msgid "Tag \"%(tag)s\" removed successfully from document \"%(document)s\"."
+msgstr ""
+
+#: templatetags/tags_tags.py:18
+msgid "Add tag to document"
+msgstr "Aggiungi l'etichetta al documento"

@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Translators:
+# Stefan Lodders <sl@suchreflex.de>, 2012
+# Mathias Behrle <mbehrle@m9s.biz>, 2014
+# Stefan Lodders <sl@suchreflex.de>, 2012
+# Stefan Lodders <sl@suchreflex.de>, 2012
+# Tobias Paepke <tobias.paepke@paepke.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-31 19:53-0400\n"
+"PO-Revision-Date: 2014-07-20 00:23+0000\n"
+"Last-Translator: Mathias Behrle <mathiasb@m9s.biz>\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/mayan-"
+"edms/language/de_DE/)\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:37 __init__.py:48
+msgid "label"
+msgstr "Bezeichner"
+
+#: __init__.py:41
+msgid "items"
+msgstr "Elemente"
+
+#: __init__.py:52
+msgid "value"
+msgstr "Wert"
+
+#: links.py:7 models.py:173
+msgid "installation details"
+msgstr "Installationsdetails"
+
+#: links.py:8 views.py:21
+msgid "installation property namespaces"
+msgstr "Installationseigenschaften Namensräume"
+
+#: links.py:9
+msgid "details"
+msgstr "Details"
+
+#: models.py:53
+msgid "Operating system"
+msgstr "Betriebssystem"
+
+#: models.py:55 models.py:62
+msgid "LSB OS"
+msgstr "LSB OS"
+
+#: models.py:56
+msgid "Distributor ID"
+msgstr "Distributoren-ID"
+
+#: models.py:57
+msgid "Description"
+msgstr "Beschreibung"
+
+#: models.py:58
+msgid "Release"
+msgstr "Version"
+
+#: models.py:59
+msgid "Codename"
+msgstr "Codename"
+
+#: models.py:60
+msgid "System info"
+msgstr "Systeminformation"
+
+#: models.py:64
+msgid "OS architecture"
+msgstr "Betriebssystem Architektur"
+
+#: models.py:65
+msgid "Python version"
+msgstr "Python Version"
+
+#: models.py:66
+msgid "Hostname"
+msgstr "Hostname"
+
+#: models.py:67
+msgid "Platform"
+msgstr "Plattform"
+
+#: models.py:68
+msgid "Machine"
+msgstr "Maschine"
+
+#: models.py:69
+msgid "Processor"
+msgstr "Prozessor"
+
+#: models.py:70
+msgid "Number of CPUs"
+msgstr "Anzahl der CPUs"
+
+#: models.py:71
+msgid "Total physical memory"
+msgstr "Gesamter physikalischer Speicher"
+
+#: models.py:72
+msgid "Disk partitions"
+msgstr "Festplattenpartitionen"
+
+#: models.py:75
+msgid "Binary dependencies"
+msgstr "Programmabhängigkeiten"
+
+#: models.py:79 models.py:81 models.py:83
+msgid "tesseract version"
+msgstr "Tesseract Version"
+
+#: models.py:81 models.py:89 models.py:97
+msgid "not found"
+msgstr "Nicht gefunden"
+
+#: models.py:83 models.py:91 models.py:99
+msgid "error getting version"
+msgstr "Fehler beim Auslesen der Version"
+
+#: models.py:87 models.py:89 models.py:91
+msgid "unpaper version"
+msgstr "unpaper Version"
+
+#: models.py:95 models.py:97 models.py:99
+msgid "pdftotext version"
+msgstr "pdftotext Version"
+
+#: models.py:102
+msgid "Mayan EDMS"
+msgstr "Mayan EDMS"
+
+#: models.py:104
+msgid "UUID"
+msgstr "UUID"
+
+#: models.py:105
+msgid "Mayan EDMS version"
+msgstr "Mayan EDMS Version"
+
+#: models.py:106
+msgid "Installed via fabfile"
+msgstr "Installiert via Fabfile"
+
+#: models.py:109
+msgid "Git repository"
+msgstr "Git-Repository"
+
+#: models.py:114 models.py:118
+msgid "Running from a Git repository"
+msgstr "Aus einem Git-Repository ausgeführt"
+
+#: models.py:119
+msgid "Repository remotes"
+msgstr "Name von entfernten Repositories"
+
+#: models.py:120
+msgid "Repository remotes URLs"
+msgstr "URLs von entfernten Repositories"
+
+#: models.py:121
+msgid "Branch"
+msgstr "Zweig"
+
+#: models.py:122
+msgid "HEAD commit hex SHA"
+msgstr "Prüfsumme des HEAD commit als SHA"
+
+#: models.py:123
+msgid "HEAD commit author"
+msgstr "HEAD commit Author"
+
+#: models.py:124
+msgid "HEAD commit authored date"
+msgstr "Zeitstempel, an dem der HEAD commit verfasst wurde"
+
+#: models.py:125
+msgid "HEAD commit committer"
+msgstr "HEAD commit Committer"
+
+#: models.py:126
+msgid "HEAD commit committed date"
+msgstr "Zeitstempel, an dem der HEAD commit übertragen wurde"
+
+#: models.py:127
+msgid "HEAD commit message"
+msgstr "HEAD commit Nachricht"
+
+#: models.py:130
+#, fuzzy
+msgid "VirtualEnv"
+msgstr "VirtualEnv"
+
+#: models.py:134
+msgid "pip not found."
+msgstr "pip nicht gefunden."
+
+#: permissions.py:7
+msgid "Installation"
+msgstr "Installation"
+
+#: permissions.py:8
+msgid "View installation environment details"
+msgstr "Details der Installationsumgebung anzeigen"
+
+#: views.py:33
+#, python-format
+msgid "installation namespace details for: %s"
+msgstr "Installationsnamensraumdetails für %s"
+
+#~ msgid "Installation environment details"
+#~ msgstr "Installation environment details"

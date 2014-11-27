@@ -1,0 +1,8 @@
+[template]
+keys = [
+  "registry/users",
+]
+owner = "nginx"
+mode = "0644"
+src = "registry.users.tmpl"
+dest = "/etc/registry.users"

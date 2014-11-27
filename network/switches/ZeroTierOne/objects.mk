@@ -1,0 +1,33 @@
+OBJS=\
+	control/IpcConnection.o \
+	control/IpcListener.o \
+	control/NodeControlClient.o \
+	control/NodeControlService.o \
+	ext/lz4/lz4.o \
+	osnet/NativeSocketManager.o \
+	node/C25519.o \
+	node/CertificateOfMembership.o \
+	node/Defaults.o \
+	node/Dictionary.o \
+	node/HttpClient.o \
+	node/Identity.o \
+	node/IncomingPacket.o \
+	node/InetAddress.o \
+	node/Logger.o \
+	node/Multicaster.o \
+	node/Network.o \
+	node/NetworkConfig.o \
+	node/Node.o \
+	node/NodeConfig.o \
+	node/OutboundMulticast.o \
+	node/Packet.o \
+	node/Peer.o \
+	node/Poly1305.o \
+	node/RoutingTable.o \
+	node/Salsa20.o \
+	node/Service.o \
+	node/SoftwareUpdater.o \
+	node/SHA512.o \
+	node/Switch.o \
+	node/Topology.o \
+	node/Utils.o

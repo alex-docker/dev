@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Pierpaolo Baldan <pierpaolo.baldan@gmail.com>, 2011
+# Roberto Rosario, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-31 19:55-0400\n"
+"PO-Revision-Date: 2012-12-12 06:07+0000\n"
+"Last-Translator: Roberto Rosario\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/mayan-edms/"
+"language/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: forms.py:13
+msgid "New password"
+msgstr "Nuova password"
+
+#: forms.py:14
+msgid "Confirm password"
+msgstr "Conferma password"
+
+#: links.py:9
+msgid "user list"
+msgstr "lista utenti"
+
+#: links.py:10 views.py:28
+msgid "users"
+msgstr "utenti"
+
+#: links.py:11 links.py:21
+msgid "edit"
+msgstr "modifica"
+
+#: links.py:12 views.py:95
+msgid "create new user"
+msgstr "crea un nuovo utente"
+
+#: links.py:13 links.py:14 links.py:23 links.py:24
+msgid "delete"
+msgstr "cancella"
+
+#: links.py:15 links.py:16
+msgid "reset password"
+msgstr "riassegna la password"
+
+#: links.py:17 links.py:20 views.py:251
+msgid "groups"
+msgstr "gruppi"
+
+#: links.py:19
+msgid "group list"
+msgstr "lista dei gruppi"
+
+#: links.py:22 views.py:302
+msgid "create new group"
+msgstr "crea un nuovo gruppo"
+
+#: links.py:25 views.py:255
+msgid "members"
+msgstr "membri"
+
+#: permissions.py:7
+msgid "User management"
+msgstr "Gestione utenti"
+
+#: permissions.py:9
+msgid "Create new users"
+msgstr "Crea un nuovo utente"
+
+#: permissions.py:10
+msgid "Edit existing users"
+msgstr "Modifica utenti "
+
+#: permissions.py:11
+msgid "View existing users"
+msgstr "Visualizza utenti"
+
+#: permissions.py:12
+msgid "Delete existing users"
+msgstr "Cancella utenti"
+
+#: permissions.py:14
+msgid "Create new groups"
+msgstr "Crea nuovi gruppi"
+
+#: permissions.py:15
+msgid "Edit existing groups"
+msgstr "Modifica gruppi esistenti"
+
+#: permissions.py:16
+msgid "View existing groups"
+msgstr "Visualizza i gruppi"
+
+#: permissions.py:17
+msgid "Delete existing groups"
+msgstr "Cancella i gruppi esistenti"
+
+#: views.py:32
+msgid "full name"
+msgstr "nome completo"
+
+#: views.py:36
+msgid "email"
+msgstr "email"
+
+#: views.py:40
+msgid "active"
+msgstr "attivo"
+
+#: views.py:44
+msgid "has usable password?"
+msgstr "la password è utilizzabile?"
+
+#: views.py:60
+msgid ""
+"Super user and staff user editing is not allowed, use the admin interface "
+"for these cases."
+msgstr ""
+"Super utente e utente modifica il personale non è consentito, utilizzare "
+"l'interfaccia di amministrazione per questi casi."
+
+#: views.py:67
+#, python-format
+msgid "User \"%s\" updated successfully."
+msgstr "Utente \"%s\" aggiornato con successo."
+
+#: views.py:73
+#, python-format
+msgid "edit user: %s"
+msgstr "modifica utente:%s"
+
+#: views.py:76 views.py:132 views.py:195 views.py:239
+msgid "user"
+msgstr "utente"
+
+#: views.py:89
+#, python-format
+msgid "User \"%s\" created successfully."
+msgstr "Utente \"%s\" creato con successo."
+
+#: views.py:110 views.py:164
+msgid "Must provide at least one user."
+msgstr "Devi fornire almeno un utente."
+
+#: views.py:120
+msgid ""
+"Super user and staff user deleting is not allowed, use the admin interface "
+"for these cases."
+msgstr ""
+"Al super utente e utente non è consentito la cancellazione del personale, "
+"utilizzare l'interfaccia di amministrazione per questi casi."
+
+#: views.py:123
+#, python-format
+msgid "User \"%s\" deleted successfully."
+msgstr "Utente \"%s\" cancellato con successo."
+
+#: views.py:125
+#, python-format
+msgid "Error deleting user \"%(user)s\": %(error)s"
+msgstr "Errore nella cancellazione dell'utente \"%(user)s\": %(error)s"
+
+#: views.py:140
+#, python-format
+msgid "Are you sure you wish to delete the user: %s?"
+msgstr "Sei sicuro di voler cancellare l'utente: %s?"
+
+#: views.py:142
+#, python-format
+msgid "Are you sure you wish to delete the users: %s?"
+msgstr "Sei sicuro di voler cancellare gli utenti: %s?"
+
+#: views.py:175
+msgid "Passwords do not match, try again."
+msgstr "La password non corrisponde, riprova."
+
+#: views.py:180
+msgid ""
+"Super user and staff user password reseting is not allowed, use the admin "
+"interface for these cases."
+msgstr ""
+"Al super utente e utente non è consentito di reimpostare la password "
+"personale, utilizzare l'interfaccia di amministrazione per questi casi."
+
+#: views.py:184
+#, python-format
+msgid "Successfull password reset for user: %s."
+msgstr "Password reimpostata per l'utente: %s."
+
+#: views.py:186
+#, python-format
+msgid "Error reseting password for user \"%(user)s\": %(error)s"
+msgstr ""
+"Errore per il reimpostamento della password per l'utente \"%(user)s\": "
+"%(error)s"
+
+#: views.py:202
+#, python-format
+msgid "Reseting password for user: %s"
+msgstr "Reimposta la password per l'utente:%s"
+
+#: views.py:204
+#, python-format
+msgid "Reseting password for users: %s"
+msgstr "Reimposta la password per gli utenti:%s"
+
+#: views.py:234
+#, python-format
+msgid "non groups of user: %s"
+msgstr ""
+
+#: views.py:235
+#, python-format
+msgid "groups of user: %s"
+msgstr ""
+
+#: views.py:275
+#, python-format
+msgid "Group \"%s\" updated successfully."
+msgstr "Gruppo \"%s\" aggiornato con successo."
+
+#: views.py:281
+#, python-format
+msgid "edit group: %s"
+msgstr "modifica gruppo: %s"
+
+#: views.py:284 views.py:336 views.py:381
+msgid "group"
+msgstr "gruppo"
+
+#: views.py:296
+#, python-format
+msgid "Group \"%s\" created successfully."
+msgstr "Gruppo \"%s\" creato con successo."
+
+#: views.py:317
+msgid "Must provide at least one group."
+msgstr "Devi almeno indicare un gruppo"
+
+#: views.py:327
+#, python-format
+msgid "Group \"%s\" deleted successfully."
+msgstr "Gruppo \"%s\" cancellato con successo."
+
+#: views.py:329
+#, python-format
+msgid "Error deleting group \"%(group)s\": %(error)s"
+msgstr "Erroro nella cancellazione del gruppo\"%(group)s\": %(error)s"
+
+#: views.py:344
+#, python-format
+msgid "Are you sure you wish to delete the group: %s?"
+msgstr "Sei sicuro di voler cancellare il gruppo: %s?"
+
+#: views.py:346
+#, python-format
+msgid "Are you sure you wish to delete the groups: %s?"
+msgstr "Sei sicuro di voler cancellare i gruppi: %s?"
+
+#: views.py:376
+#, python-format
+msgid "non members of group: %s"
+msgstr "non membri del gruppo: %s"
+
+#: views.py:377
+#, python-format
+msgid "members of group: %s"
+msgstr "membri del gruppo: %s"

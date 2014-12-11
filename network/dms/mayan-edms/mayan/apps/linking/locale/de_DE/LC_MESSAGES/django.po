@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Stefan Lodders <sl@suchreflex.de>, 2012
+# Mathias Behrle <mbehrle@m9s.biz>, 2014
+# Stefan Lodders <sl@suchreflex.de>, 2012
+# tilmannsittig <tilmann.sittig@web.de>, 2012
+# tilmannsittig <tilmann.sittig@web.de>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-31 19:53-0400\n"
+"PO-Revision-Date: 2014-03-12 16:12+0000\n"
+"Last-Translator: Mathias Behrle <mathiasb@m9s.biz>\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/mayan-"
+"edms/language/de_DE/)\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: forms.py:49
+msgid "Pages"
+msgstr "Seiten"
+
+#: forms.py:55
+msgid "Select"
+msgstr "Auswählen"
+
+#: forms.py:62
+msgid "Click on the image for full size view of the first page."
+msgstr ""
+"Klicken Sie auf das Bild um die erste Seite in voller Größe anzuzeigen."
+
+#: links.py:11
+msgid "smart links actions"
+msgstr "Aktionen für Intelligente Verknüpfungen"
+
+#: links.py:12 links.py:14 models.py:23 views.py:130
+msgid "smart links"
+msgstr "Intelligente Verknüpfungen"
+
+#: links.py:15
+msgid "smart links list"
+msgstr "Liste der Intelligenten Verknüpfungen"
+
+#: links.py:16
+msgid "create new smart link"
+msgstr "Neue Intelligente Verknüpfung erstellen"
+
+#: links.py:17 links.py:22
+msgid "edit"
+msgstr "Bearbeiten"
+
+#: links.py:18 links.py:23
+msgid "delete"
+msgstr "Löschen"
+
+#: links.py:20
+msgid "conditions"
+msgstr "Bedingungen"
+
+#: links.py:21
+msgid "create condition"
+msgstr "Bedingung erstellen"
+
+#: links.py:25
+msgid "ACLs"
+msgstr "Zugriffsberechtigungen"
+
+#: literals.py:7
+msgid "and"
+msgstr "und"
+
+#: literals.py:8
+msgid "or"
+msgstr "oder"
+
+#: literals.py:12
+msgid "is equal to"
+msgstr "ist gleich zu"
+
+#: literals.py:13
+msgid "is equal to (case insensitive)"
+msgstr "ist gleich zu (ohne Groß/Kleinschreibung)"
+
+#: literals.py:14
+msgid "contains"
+msgstr "enthält"
+
+#: literals.py:15
+msgid "contains (case insensitive)"
+msgstr "enthält (ohne Groß/Kleinschreibung)"
+
+#: literals.py:16
+msgid "is in"
+msgstr "ist in"
+
+#: literals.py:17
+msgid "is greater than"
+msgstr "ist größer als"
+
+#: literals.py:18
+msgid "is greater than or equal to"
+msgstr "ist größer oder gleich zu"
+
+#: literals.py:19
+msgid "is less than"
+msgstr "ist kleiner als"
+
+#: literals.py:20
+msgid "is less than or equal to"
+msgstr "ist kleiner oder gleich zu"
+
+#: literals.py:21
+msgid "starts with"
+msgstr "beginnt mit"
+
+#: literals.py:22
+msgid "starts with (case insensitive)"
+msgstr "beginnt mit (ohne Groß/Kleinschreibung)"
+
+#: literals.py:23
+msgid "ends with"
+msgstr "endet mit"
+
+#: literals.py:24
+msgid "ends with (case insensitive)"
+msgstr "endet mit (ohne Groß/Kleinschreibung)"
+
+#: literals.py:25
+msgid "is in regular expression"
+msgstr "ist in regulärem Ausdruck"
+
+#: literals.py:26
+msgid "is in regular expression (case insensitive)"
+msgstr "ist in regulärem Ausdruck (ohne Groß/Kleinschreibung)"
+
+#: models.py:12
+msgid "title"
+msgstr "Titel"
+
+#: models.py:13 views.py:133
+msgid "dynamic title"
+msgstr "Dynamischer Titel"
+
+#: models.py:13 models.py:31
+msgid ""
+"This expression will be evaluated against the current selected document.  "
+"The document metadata is available as variables `metadata` and document "
+"properties under the variable `document`."
+msgstr ""
+"Dieser Ausdruck wird gegen das aktuell ausgewählte Dokument ausgewertet "
+"werden. Die Dokument-Metadaten sind verfügbar als Variable `metadata` und "
+"Dokumenteneigenschaften als Variable `document`. "
+
+#: models.py:14 models.py:33 views.py:134 views.py:229
+msgid "enabled"
+msgstr "Aktiviert"
+
+#: models.py:22 models.py:27 views.py:293 views.py:327
+msgid "smart link"
+msgstr "intelligente Verknüpfung"
+
+#: models.py:28
+msgid "The inclusion is ignored for the first item."
+msgstr "Die Einbeziehung wird für das erste Element ignoriert."
+
+#: models.py:29
+msgid "foreign document data"
+msgstr "Fremde Dokumentendaten"
+
+#: models.py:29
+msgid ""
+"This represents the metadata of all other documents.  Available objects: "
+"`document.<attribute>` and `metadata.<metadata_type_name>`."
+msgstr ""
+"Dies stellt die Metadaten aller anderen Dokumenten dar. Verfügbare Objekte: "
+"`document.<attribute> ` und ` metadata.<metadata_type_name> `."
+
+#: models.py:31
+msgid "expression"
+msgstr "Ausdruck"
+
+#: models.py:32
+msgid "negated"
+msgstr "Negiert"
+
+#: models.py:32
+msgid "Inverts the logic of the operator."
+msgstr "Kehrt die Logik der Operation um."
+
+#: models.py:36
+msgid "not"
+msgstr "Nicht"
+
+#: models.py:39
+msgid "link condition"
+msgstr "Verknüpfungs-Bedingung"
+
+#: models.py:40
+msgid "link conditions"
+msgstr "Verknüpfungs-Bedingungen"
+
+#: permissions.py:7
+msgid "Smart links"
+msgstr "Intelligente Verknüpfungen"
+
+#: permissions.py:9
+msgid "View existing smart links"
+msgstr "Existierende Intelligente Verknüpfungen anzeigen"
+
+#: permissions.py:10
+msgid "Create new smart links"
+msgstr "Intelligente Verknüpfungen erstellen"
+
+#: permissions.py:11
+msgid "Delete smart links"
+msgstr "Intelligente Verknüpfungen löschen"
+
+#: permissions.py:12
+msgid "Edit smart links"
+msgstr "Intelligente Verknüpfungen bearbeiten"
+
+#: views.py:39
+msgid "No action selected."
+msgstr "Keine Aktion ausgewählt."
+
+#: views.py:58
+#, python-format
+msgid "documents in smart link: %(group)s"
+msgstr "Dokumente in intelligenter Verknüpfung: %(group)s"
+
+#: views.py:74
+#, python-format
+msgid "Smart link query error: %s"
+msgstr "Abfragefehler in intelligenter Verknüpfung: %s"
+
+#: views.py:96
+#, python-format
+msgid "smart links (%s)"
+msgstr "intelligente Verknüpfungen (%s)"
+
+#: views.py:110
+msgid "There no defined smart links for the current document."
+msgstr "Keine Intelligenten Verknüpfungen für das aktuelle Dokument definiert."
+
+#: views.py:150
+#, python-format
+msgid "Smart link: %s created successfully."
+msgstr "Intelligente Verknüpfung %s erfolgreich erstellt."
+
+#: views.py:157
+msgid "Create new smart link"
+msgstr "Intelligente Verknüpfung erstellen"
+
+#: views.py:173
+#, python-format
+msgid "Smart link: %s edited successfully."
+msgstr "intelligente Verknüpfung %s erfolgreich bearbeitet."
+
+#: views.py:181
+#, python-format
+msgid "Edit smart link: %s"
+msgstr "Intelligente Verknüpfung bearbeiten: %s"
+
+#: views.py:199
+#, python-format
+msgid "Smart link: %s deleted successfully."
+msgstr "Intelligente Verknüpfung %s erfolgreich gelöscht."
+
+#: views.py:201
+#, fuzzy, python-format
+msgid "Error deleting smart link: %(smart_link)s; %(exception)s."
+msgstr ""
+"Fehler beim Löschen der intelligenten Verknüpfung %(smart_link)s: %(error)s ."
+
+#: views.py:210
+#, python-format
+msgid "Are you sure you wish to delete smart link: %s?"
+msgstr ""
+"Sind Sie sicher, dass Sie die intelligente Verknüpfung %s löschen möchten?"
+
+#: views.py:226
+#, python-format
+msgid "conditions for smart link: %s"
+msgstr "Bedingungen für die Intelligente Verknüpfung %s"
+
+#: views.py:251
+#, python-format
+msgid "Smart link condition: \"%s\" created successfully."
+msgstr "Bedingung für Intelligente Verknüpfung \"%s\" erfolgreich erstellt."
+
+#: views.py:258
+#, python-format
+msgid "Add new conditions to smart link: \"%s\""
+msgstr "Neue Bedingungen zu Intelligenter Verknüpfung \"%s\" hinzufügen"
+
+#: views.py:280
+#, python-format
+msgid "Smart link condition: \"%s\" edited successfully."
+msgstr "Bedingung für Intelligente Verknüpfung: \"%s\" erfolgreich bearbeitet."
+
+#: views.py:287
+msgid "Edit smart link condition"
+msgstr "Bedingung für Intelligente Verknüpfung bearbeiten"
+
+#: views.py:294 views.py:328
+msgid "condition"
+msgstr "Bedingung"
+
+#: views.py:314
+#, python-format
+msgid "Smart link condition: \"%s\" deleted successfully."
+msgstr "Bedingung für Intelligente Verknüpfung: \"%s\" erfolgreich gelöscht."
+
+#: views.py:316
+#, fuzzy, python-format
+msgid ""
+"Error deleting smart link condition: %(smart_link_condition)s; %(exception)s."
+msgstr "Fehler beim Löschen der Bedingung %(smart_link_condition)s: %(error)s."
+
+#: views.py:330
+#, python-format
+msgid "Are you sure you wish to delete smart link condition: \"%s\"?"
+msgstr "Sind Sie sicher, dass Sie die Bedingung \"%s\" löschen möchten?"
+
+#: conf/settings.py:11
+msgid "Show smart link that don't return any documents."
+msgstr ""
+"Intelligente Verknüpfungen anzeigen, die auf keine Dokumente verweisen."
+
+#: templates/smart_links_help.html:3
+msgid "What are smart links?"
+msgstr "Was sind intelligente Verknüpfungen?"
+
+#: templates/smart_links_help.html:4
+msgid ""
+"Smart links are a set of conditional statements that are used to query the "
+"database using the current document the user is accessing as the data "
+"source, the results of these queries are a list of documents that relate in "
+"some manner to the document being displayed and allow users the ability to "
+"jump to and from linked documents very easily."
+msgstr ""
+"Intelligente Verknüpfungen liegen eine Reihe von Bedingungen zugrunde, die "
+"ein Dokument mit anderen Dokumenten in der Datenbank in Beziehung setzen. "
+"Sie liefern andere Dokumente, die mit dem Quelldokument in der gewünschten "
+"Weise in Beziehung stehen und bieten so dem Benutzer die Möglichkeit, "
+"zwischen verwandten Dokumenten einfach zu navigieren."

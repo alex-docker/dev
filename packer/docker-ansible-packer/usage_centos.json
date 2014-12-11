@@ -1,0 +1,11 @@
+{
+  "builders": [{
+      "type": "docker",
+      "image": "slapula/centos6-ansible",
+      "export_path": "centos6-provisioned.tar"
+  }],
+  "provisioners": [{
+      "type": "ansible-local",
+      "playbook_file": "provision.yaml"
+  }]
+}

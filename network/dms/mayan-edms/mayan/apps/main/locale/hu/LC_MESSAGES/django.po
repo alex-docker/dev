@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dezső József <dejo60@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Mayan EDMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-31 19:53-0400\n"
+"PO-Revision-Date: 2013-06-25 11:08+0000\n"
+"Last-Translator: Dezső József <dejo60@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/projects/p/mayan-edms/"
+"language/hu/)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:14
+msgid "home"
+msgstr "kezdő oldal"
+
+#: __init__.py:16
+msgid "search"
+msgstr "keresés"
+
+#: links.py:8
+msgid "maintenance"
+msgstr "karbantartás"
+
+#: links.py:9
+msgid "diagnostics"
+msgstr "diagnosztika"
+
+#: links.py:10
+msgid "sentry"
+msgstr "őrszem"
+
+#: links.py:11
+msgid "admin site"
+msgstr "admin oldal"
+
+#: views.py:41
+msgid "maintenance menu"
+msgstr "karbantartás menü"
+
+#: views.py:48
+msgid "Diagnostics"
+msgstr "Diagnosztika"
+
+#: conf/settings.py:12
+msgid ""
+"Controls whether the search functionality is provided by a sidebar widget or "
+"by a menu entry."
+msgstr ""
+"Azt szabályozza, hogy a keresés funkciót, az oldalsávban vagy egy "
+"menüpontban legyen."
+
+#: templates/about.html:8
+msgid "About this program"
+msgstr "A programról"
+
+#: templates/about.html:12 templates/verbose_login.html:5
+msgid "Version"
+msgstr "Verzió"
+
+#: templates/about.html:20 templates/home.html:17
+#: templates/verbose_login.html:7
+msgid "Copyright &copy; 2011 Roberto Rosario."
+msgstr ""
+
+#: templates/base.html:31
+msgid "(DEBUG)"
+msgstr "(Hibakeresés)"
+
+#: templates/base.html:262
+msgid "User"
+msgstr "Felhasználó"
+
+#: templates/base.html:264
+msgid "Anonymous"
+msgstr "névtelen felhasználó"
+
+#: templates/base.html:267
+msgid "User details"
+msgstr "A felhasználó adatai"
+
+#: templates/base.html:284
+msgid "Login"
+msgstr "Bejelentkezés"
+
+#: templates/base.html:284
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: templates/base.html:364
+msgid "Secondary menu"
+msgstr "Másodlagos menü"
+
+#: templates/base.html:380
+#, python-format
+msgid "Actions for %(name)s: %(navigation_object)s"
+msgstr "Műveletek ezzel %(name)s: %(navigation_object)s"
+
+#: templates/base.html:382 templates/base.html.py:425
+#, python-format
+msgid "Actions for: %(navigation_object)s"
+msgstr "Műveletek ezen: %(navigation_object)s"
+
+#: templates/base.html:385
+msgid "Available actions"
+msgstr "Rendelkezésre álló műveletek"
+
+#: templates/base.html:397 templates/base.html.py:440
+msgid "Related actions"
+msgstr "Kapcsolódó műveletek"
+
+#: templates/base.html:408 templates/base.html.py:453
+msgid "Other available actions"
+msgstr "További rendelkezésre álló műveletek"
+
+#: templates/base.html:423
+#, python-format
+msgid "Actions for %(object_name)s: %(navigation_object)s"
+msgstr "Műveletek ezzel %(object_name)s: %(navigation_object)s"
+
+#: templates/base.html:428
+msgid "Actions"
+msgstr "Műveletek"
+
+#: templates/home.html:11
+msgid "Django based open source document management system"
+msgstr "Django alapú nyílt forrású dokumentum kezelő rendszer"
+
+#: templates/project_description.html:7
+msgid ""
+"Open source, Django based electronic document manager with custom metadata, "
+"indexing, tagging, file serving integration, digital signature support and "
+"OCR capabilities"
+msgstr ""
+"Nyílt forráskódú, Django alapú elektronikus dokumentum kezelő egyéni "
+"metaadat, indexelés és címkézés, fájlkiszolgáló integráció, digitális "
+"aláírás támogatás és OCR képességekkel."
+
+#: templates/project_description.html:22
+#, fuzzy
+msgid "Released under the Apache 2.0 License"
+msgstr "Kiadás GPL 3 Licence alatt"
+
+#~ msgid "statistics"
+#~ msgstr "statisztikák"
+
+#~ msgid "Statistics"
+#~ msgstr "Statisztika"

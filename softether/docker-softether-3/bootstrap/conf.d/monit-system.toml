@@ -1,0 +1,8 @@
+[template]
+
+src  = "monit-system.conf.tmpl"
+dest = "{{SOURCE_ROOTDIR}}/settings/monit-system.conf"
+keys = [
+  "/meta/net/allowed",
+  "/meta/node/monit/password",
+]

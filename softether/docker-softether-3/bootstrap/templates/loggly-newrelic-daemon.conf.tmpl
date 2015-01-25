@@ -1,0 +1,18 @@
+$InputFilePollInterval 10
+$PrivDropToGroup adm
+$WorkDirectory /var/spool/rsyslog
+
+# Input for /var/log/newrelic/newrelic-daemon.log
+$InputFileName /var/log/newrelic/newrelic-daemon.log
+$InputFileTag newrelic-daemon:
+$InputFileStateFile state-newrelic-daemon #this must be unique for each file being polled
+$InputFileSeverity info
+$InputFilePersistStateInterval 20000
+$InputRunFileMonitor
+
+# Add a tag for file events
+$template LogglyFormatFile,"<%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [{{getv "/meta/cloud/loggly/token"}}@41058 tag=\"file\"] %msg%\n"
+
+# Send to Loggly then discard
+if $programname == 'newrelic-daemon' then @@logs-01.loggly.com:514;LogglyFormatFile
+if $programname == 'newrelic-daemon' then stop

@@ -1,0 +1,9 @@
+[template]
+
+src  = "supervisord.conf.tmpl"
+dest = "/etc/supervisor/conf.d/supervisord.conf"
+keys = [
+  "/meta/node/name",
+  "/meta/node/ip",
+  "/meta/consul/masterserverip",
+]

@@ -1,0 +1,7 @@
+[template]
+
+src  = "monit-services.conf.tmpl"
+dest = "{{SOURCE_ROOTDIR}}/settings/monit-services.conf"
+keys = [
+  "/meta/service/fqdn",
+]

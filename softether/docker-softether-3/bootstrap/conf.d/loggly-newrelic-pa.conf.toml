@@ -1,0 +1,7 @@
+[template]
+
+src  = "loggly-newrelic-pa.conf.tmpl"
+dest = "{{SOURCE_ROOTDIR}}/settings/loggly-newrelic-pa.conf"
+keys = [
+  "/meta/cloud/loggly/token",
+]

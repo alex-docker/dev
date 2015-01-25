@@ -1,0 +1,19 @@
+$PrivDropToGroup adm
+$WorkDirectory /var/spool/rsyslog
+
+$template LogglyFormat,"<%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [9dba187a-a216-4ea6-85a0-8e7cbe14db2e@41058] %msg%"
+
+$ActionResumeInterval 10
+$ActionQueueSize 100000
+$ActionQueueDiscardMark 97500
+$ActionQueueHighWaterMark 80000
+$ActionQueueType LinkedList
+$ActionQueueFileName queue-loggly
+$ActionQueueCheckpointInterval 100
+$ActionQueueMaxDiskSpace 2g
+$ActionResumeRetryCount -1
+$ActionQueueSaveOnShutdown on
+$ActionQueueTimeoutEnqueue 1
+$ActionQueueDiscardSeverity 0
+
+*.*     @@logs-01.loggly.com:514;LogglyFormat

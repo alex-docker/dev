@@ -1,0 +1,7 @@
+backend  = "env"
+confdir  = "/etc/confd"
+debug    = false
+interval = 600
+noop     = false
+quiet    = false
+verbose  = false

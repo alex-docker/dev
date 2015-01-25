@@ -1,0 +1,10 @@
+[template]
+
+src  = "supervisord.conf.tmpl"
+dest = "{{SOURCE_ROOTDIR}}/settings/confd/templates/supervisord.conf.tmpl"
+keys = [
+  "/meta/node/supervisor/password",
+  "/meta/node/name",
+  "/meta/node/ip",
+  "/meta/consul/masterserverip",
+]

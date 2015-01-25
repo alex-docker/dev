@@ -1,0 +1,4 @@
+check process vpnserver with pidfile /var/run/vpnserver.pid
+  start program = "/usr/sbin/service vpnserver start" with timeout 60 seconds
+  stop program  = "/usr/sbin/service vpnserver stop"
+  restart program  = "/usr/sbin/service vpnserver restart" with timeout 120 seconds

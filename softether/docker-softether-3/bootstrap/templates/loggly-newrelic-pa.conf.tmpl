@@ -1,0 +1,30 @@
+$InputFilePollInterval 10
+$PrivDropToGroup adm
+$WorkDirectory /var/spool/rsyslog
+
+# Input for /var/log/newrelic/newrelic-plugin-agent.log
+$InputFileName /var/log/newrelic/newrelic-plugin-agent.log
+$InputFileTag newrelic-pa:
+$InputFileStateFile state-newrelic-pa #this must be unique for each file being polled
+$InputFileSeverity info
+$InputFilePersistStateInterval 20000
+$InputRunFileMonitor
+
+# Input for /var/log/newrelic-plugin-agent.errors
+$InputFileName /var/log/newrelic-plugin-agent.errors
+$InputFileTag newrelic-pa-errors:
+$InputFileStateFile state-newrelic-pa-errors #this must be unique for each file being polled
+$InputFileSeverity info
+$InputFilePersistStateInterval 20000
+$InputRunFileMonitor
+
+# Add a tag for file events
+$template LogglyFormatFile,"<%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [{{getv "/meta/cloud/loggly/token"}}@41058 tag=\"file\"] %msg%\n"
+
+# Send to Loggly then discard
+if $programname == 'newrelic-pa' then @@logs-01.loggly.com:514;LogglyFormatFile
+if $programname == 'newrelic-pa' then stop
+
+# Send to Loggly then discard
+if $programname == 'newrelic-pa-errors' then @@logs-01.loggly.com:514;LogglyFormatFile
+if $programname == 'newrelic-pa-errors' then stop

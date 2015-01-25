@@ -1,0 +1,7 @@
+[template]
+
+src  = "loggly-supervisord.conf.tmpl"
+dest = "{{SOURCE_ROOTDIR}}/settings/loggly-supervisord.conf"
+keys = [
+  "/meta/cloud/loggly/token",
+]

@@ -1,0 +1,6 @@
+{
+  "service" : {
+    "name"  : "vpnserver",
+    "port"  : 5555
+  }
+}

@@ -1,0 +1,199 @@
+[supervisord]
+nodaemon = true
+pidfile = /var/run/supervisord.pid
+chmod = 0700
+umask = 022
+minfds = 1024
+minprocs = 200
+
+logfile = /var/log/supervisor/supervisord.log
+childlogdir = /var/log/supervisor/
+logfile_maxbytes = 50MB
+logfile_backups = 10
+loglevel = info
+strip_ansi = false
+nocleanup = true
+
+identifier = supervisor
+
+
+[supervisorctl]
+serverurl = http://127.0.0.1:9001
+username = svadm
+password = {{getv "/meta/node/supervisor/password"}}
+prompt = supervisor
+history_file = /var/log/supervisor/supervisord_history.log
+
+
+[inet_http_server]
+port = 127.0.0.1:9001
+username = svadm
+password = {{getv "/meta/node/supervisor/password"}}
+
+
+[program:sshd]
+priority = 0
+command = /usr/sbin/sshd -D
+
+autostart = true
+autorestart = true
+startsecs = 10
+startretries = 3
+exitcodes = 0,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:confd]
+priority = 1
+command = /usr/local/bin/confd
+
+autostart = true
+autorestart = true
+startsecs = 10
+startretries = 3
+exitcodes = 0,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:rsyslog]
+priority = 10
+command = /usr/sbin/rsyslogd
+
+autostart = true
+autorestart = unexpected
+startsecs = 0
+startretries = 3
+exitcodes = 0,1,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:newrelic-sysmond]
+priority = 10
+command = /usr/sbin/nrsysmond -c /etc/newrelic/nrsysmond.cfg -n {{getv "/meta/node/name"}}
+
+autostart = true
+autorestart = unexpected
+startsecs = 0
+startretries = 3
+exitcodes = 0,1,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:newrelic-daemon]
+priority = 10
+command = /usr/bin/newrelic-daemon -c /etc/newrelic/newrelic.cfg -p /var/run/newrelic-daemon.pid
+
+autostart = true
+autorestart = unexpected
+startsecs = 0
+startretries = 3
+exitcodes = 0,1,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:newrelic-plugin-agent]
+priority = 10
+command = /usr/local/bin/newrelic-plugin-agent -c /etc/newrelic/newrelic-plugin-agent.cfg
+
+autostart = true
+autorestart = unexpected
+startsecs = 0
+startretries = 3
+exitcodes = 0,1,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:consul]
+priority = 20
+command = /bin/consul agent -config-dir=/etc/consul -log-level=info -syslog -bind={{getv "/meta/node/ip"}} -advertise {{getv "/meta/node/ip"}} -server -join {{getv "/meta/consul/masterserverip"}}
+
+autostart = true
+autorestart = true
+startsecs = 10
+startretries = 3
+exitcodes = 0,1,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
+
+
+[program:monit]
+priority = 30
+command = /usr/bin/monit -Ic /etc/monit/monitrc
+
+autostart = true
+autorestart = true
+startsecs = 10
+startretries = 3
+exitcodes = 0,1,2
+stopsignal = TERM
+stopwaitsecs = 10
+
+redirect_stderr = false
+stdout_logfile = AUTO
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups = 10
+stderr_logfile = AUTO
+stderr_logfile_maxbytes = 50MB
+stderr_logfile_backups = 10
